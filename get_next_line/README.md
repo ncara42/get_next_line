@@ -234,3 +234,14 @@ El proyecto hace un uso intensivo de memoria dinámica:
 - ⚠️ El comportamiento es indefinido si el file descriptor cambia entre llamadas
 - ⚠️ BUFFER_SIZE debe ser mayor que 0
 - ⚠️ La función debe funcionar correctamente tanto leyendo de archivos como de stdin
+
+---
+
+## Información de Contacto
+
+**GitHub:** [ncara42](https://github.com/ncara42)  
+**42 Network:** [42 Madrid](https://www.42madrid.com/)
+
+---
+
+*Documento para fines de portfolio profesional. Todos los ejercicios fueron completados de forma individual siguiendo la normativa y valores de 42.*
