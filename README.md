@@ -9,7 +9,7 @@
 
 ## Descripción
 
-`get_next_line` es una función en C que lee y devuelve una línea desde un file descriptor. Este proyecto es fundamental para entender la gestión de memoria dinámica, el manejo de archivos y la lectura eficiente de datos en C.
+**get_next_line** es una función en C que lee y devuelve una línea desde un file descriptor. Este proyecto es fundamental para entender la gestión de memoria dinámica, el manejo de archivos y la lectura eficiente de datos en C.
 
 La función lee línea por línea desde cualquier file descriptor (archivo, entrada estándar, etc.), independientemente del tamaño del buffer definido, manteniendo el estado entre llamadas mediante variables estáticas.
 
