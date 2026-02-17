@@ -56,7 +56,7 @@ int main(void)
 }
 ```
 
-## 🔧 Funcionamiento Interno
+## Funcionamiento Interno
 
 ### Algoritmo Principal
 
