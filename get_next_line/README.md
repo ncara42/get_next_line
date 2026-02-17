@@ -14,8 +14,8 @@ La función lee línea por línea desde cualquier file descriptor (archivo, entr
 - ✅ Funciona con cualquier tamaño de BUFFER_SIZE
 - ✅ Mantiene el estado entre llamadas sucesivas
 - ✅ Gestión eficiente de memoria
-- ✅ Maneja múltiples file descriptors simultáneamente (usando la variable estática)
 - ✅ Devuelve NULL cuando llega al final del archivo o en caso de error
+- ⚠️ Nota: La versión básica soporta un file descriptor a la vez (variable estática única)
 
 ## 🚀 Compilación y Uso
 
