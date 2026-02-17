@@ -2,22 +2,22 @@
 
 *Proyecto desarrollado como parte del currículo de 42 por ncaravac.*
 
-## 📋 Descripción
+## Descripción
 
 `get_next_line` es una función en C que lee y devuelve una línea desde un file descriptor. Este proyecto es fundamental para entender la gestión de memoria dinámica, el manejo de archivos y la lectura eficiente de datos en C.
 
 La función lee línea por línea desde cualquier file descriptor (archivo, entrada estándar, etc.), independientemente del tamaño del buffer definido, manteniendo el estado entre llamadas mediante variables estáticas.
 
-## 🎯 Características
+## Características
 
 - ✅ Lee una línea completa desde un file descriptor
 - ✅ Funciona con cualquier tamaño de BUFFER_SIZE
 - ✅ Mantiene el estado entre llamadas sucesivas
 - ✅ Gestión eficiente de memoria
 - ✅ Devuelve NULL cuando llega al final del archivo o en caso de error
-- ⚠️ Nota: La versión básica soporta un file descriptor a la vez (variable estática única)
+- ⚠️ Nota: La versión estándar soporta un file descriptor a la vez (variable estática única)
 
-## 🚀 Compilación y Uso
+## Compilación y Uso
 
 ### Compilación
 
@@ -132,7 +132,7 @@ El algoritmo de `get_next_line` se divide en tres fases principales:
                     └─→ return line
 ```
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 get_next_line/
@@ -142,7 +142,7 @@ get_next_line/
 └── README.md                # Este archivo
 ```
 
-## 🔨 Funciones Implementadas
+## Funciones Implementadas
 
 ### Función Principal
 
@@ -173,7 +173,7 @@ Busca la primera ocurrencia de un carácter en una cadena.
 #### `char *ft_strcat(char *str, const char *s1, const char *s2)`
 Concatena dos cadenas en un buffer preasignado.
 
-## 🧪 Casos de Prueba Importantes
+## Casos de Prueba Importantes
 
 ### 1. Archivo con múltiples líneas
 ```
@@ -214,7 +214,7 @@ gcc -D BUFFER_SIZE=9999 ...
 ### Variable Estática: stash
 Mantiene el contenido leído pero aún no devuelto entre llamadas sucesivas. Es crucial para el funcionamiento de la función ya que permite mantener el estado.
 
-## 💾 Gestión de Memoria
+## Gestión de Memoria
 
 El proyecto hace un uso intensivo de memoria dinámica:
 
@@ -229,24 +229,3 @@ El proyecto hace un uso intensivo de memoria dinámica:
 - ⚠️ El comportamiento es indefinido si el file descriptor cambia entre llamadas
 - ⚠️ BUFFER_SIZE debe ser mayor que 0
 - ⚠️ La función debe funcionar correctamente tanto leyendo de archivos como de stdin
-
-## 📚 Conceptos Clave Aprendidos
-
-- **Variables estáticas**: Mantienen su valor entre llamadas a funciones
-- **Gestión de memoria dinámica**: malloc, free, y prevención de memory leaks
-- **Manejo de file descriptors**: open, read, close
-- **Manipulación de strings**: Operaciones básicas sin usar funciones de `<string.h>`
-- **Algoritmos de parsing**: Búsqueda de delimitadores y procesamiento de datos
-
-## 🎓 Recursos Utilizados
-
-- [Documentación oficial de C](https://en.cppreference.com/)
-- [man pages](https://man7.org/) - `man read`, `man open`, `man malloc`
-- Stackoverflow para resolución de problemas específicos
-- Herramientas de debugging: valgrind, gdb
-
----
-
-**Autor**: ncaravac  
-**Escuela**: 42  
-**Fecha**: Diciembre 2025
