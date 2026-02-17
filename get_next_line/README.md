@@ -1,6 +1,11 @@
 # get_next_line
 
-*Proyecto desarrollado como parte del currículo de 42 por ncaravac.*
+**Estudiante:** ncaravac  
+**Campus:** 42 Madrid, España <br>
+**Período:** Diciembre 2025  
+**Lenguaje:** C  
+
+---
 
 ## Descripción
 
