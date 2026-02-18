@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncaravac <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ncaravac <ncaravac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 02:06:10 by ncaravac          #+#    #+#             */
-/*   Updated: 2025/12/23 13:15:31 by ncaravac         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:00:49 by ncaravac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,18 +67,23 @@ int	get_buffer(char **stash, char *buffer, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash;
-	char		*buffer;
-	char		*line;
-	int			bytes;
+    static char	*stash;
+    char		*buffer;
+    char		*line;
+    int			bytes;
 
-	if (BUFFER_SIZE <= 0)
-		return (NULL);
-	line = NULL;
-	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (!buffer)
-		return (NULL);
-	bytes = get_buffer(&stash, buffer, fd);
-	line = get_line(bytes, &stash, line);
-	return (line);
+    if (BUFFER_SIZE <= 0)
+        return (NULL);
+    line = NULL;
+    buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
+    if (!buffer)
+        return (NULL);
+    bytes = get_buffer(&stash, buffer, fd);
+    line = get_line(bytes, &stash, line);
+    if (!line && stash)
+    {
+        free(stash);
+        stash = NULL;
+    }
+    return (line);
 }
